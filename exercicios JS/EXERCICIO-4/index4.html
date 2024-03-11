@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        #contador {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+
+    <button type="button" onclick="aumentarContador()">Clique em mim!</button>    
+    <button type="button" onclick="resetarContador()">Resetar contador</button>
+
+    <p>O contador está com <span id="contador">0</span> cliques</p> 
+
+    <script>
+     let contador = 0;
+
+     function aumentarContador(){
+         contador++;
+         document.getElementById('contador').innerText = contador;
+     }
+
+     function resetarContador(){
+         contador = 0;
+         document.getElementById('contador').innerText = contador;
+     }
+    </script>
+</body>
+</html>
